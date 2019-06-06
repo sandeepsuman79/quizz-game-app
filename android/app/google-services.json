@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "95582090676",
+    "firebase_url": "https://loco-b033f.firebaseio.com",
+    "project_id": "loco-b033f",
+    "storage_bucket": "loco-b033f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:95582090676:android:86e328f14e7ecc88",
+        "android_client_info": {
+          "package_name": "com.loco"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "95582090676-8drrjagpab8sggjqn7cj0c61sbspc38g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAO6MYOQKWeETzqgYJOAsCJ-6i_exGZCd8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "95582090676-8drrjagpab8sggjqn7cj0c61sbspc38g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
