@@ -11,7 +11,7 @@ import {
   AppRegistry,
   TouchableOpacity
 } from "react-native";
-import Hyperlink from "react-native-hyperlink";
+//import Hyperlink from "react-native-hyperlink";
 import { LoginManager } from "react-native-fbsdk";
 import {
   GoogleSignin,
@@ -50,21 +50,24 @@ export default class SplashScreen extends Component {
   //     this.props.navigation.navigate('Login')
 
   // }
-  state = { username: "", password: "" };
-  checkSignUp() {
-    const { username, password } = this.state;
-    if (username == "" && password == "") {
-      //console.warn('login is correct')           /* this way to print on console */
-      this.props.navigation.navigate("dashboard");
-    } else {
-      //console.warn('login is incorrect')         /* this way to print on console */
-      Alert.alert("Error", "username/password mismatch", [
-        {
-          text: "Okey"
-        }
-      ]);
-    }
+  GoToLogin() {
+    this.props.navigation.navigate("Login");
   }
+  // state = { username: "", password: "" };
+  // checkSignUp() {
+  //   const { username, password } = this.state;
+  //   if (username == "" && password == "") {
+  //     //console.warn('login is correct')           /* this way to print on console */
+  //     this.props.navigation.navigate("dashboard");
+  //   } else {
+  //     //console.warn('login is incorrect')         /* this way to print on console */
+  //     Alert.alert("Error", "username/password mismatch", [
+  //       {
+  //         text: "Okey"
+  //       }
+  //     ]);
+  //   }
+  // }
   _goToSignUp = () => {
     this.props.navigation.navigate("Sign");
   };
@@ -131,13 +134,21 @@ export default class SplashScreen extends Component {
     } else {
       return (
         <ImageBackground
-          source={require("../static/img/bg1.jpg")}
+          source={require("../static/img/bg1.png")}
           style={styles.container}
         >
-          <View style={{ flex: 3, justifyContent: "space-around" }}>
-            {/* <Image
-              source={require('../static/img/bg1.jpg')}
-            /> */}
+          <View
+            style={{
+              flex: 3,
+              alignItems: "center",
+              justifyContent: "center"
+              //width: "50%"
+            }}
+          >
+            <Image
+              style={{ flex: 1, resizeMode: "contain" }}
+              source={require("../static/img/loggo.png")}
+            />
             {/* <Text style={{ fontSize: 80 }}>Q</Text> */}
           </View>
 
@@ -306,7 +317,7 @@ export default class SplashScreen extends Component {
               <Image style={{ hei..</div>("../static/img/google.png")} />
               <Text style={{ line..</div>ogle</Text>
             </Text>
-          </TouchableOpacity> */}
+          </TouchableOpacity>  */}
 
           {/* <TouchableOpacity 
     style={{borderWidth:2,borderColor:"#2980b9",width:'60%',height:40,marginBottom:10}}
@@ -344,7 +355,7 @@ export default class SplashScreen extends Component {
           <View
             style={{
               flex: 5,
-              marginTop: 10,
+              //marginTop: 10,
               width: "80%",
               alignItems: "center",
               justifyContent: "center"
@@ -352,7 +363,7 @@ export default class SplashScreen extends Component {
           >
             <TouchableOpacity
               style={styles.loginBtn}
-              onPress={() => this.checkSignUp()}
+              onPress={() => this.GoToLogin()}
             >
               <LinearGradient
                 colors={["#489FCC", "#FFA067", "#50256F", "#50256F"]}
@@ -370,14 +381,14 @@ export default class SplashScreen extends Component {
                 <Text
                   style={{
                     fontSize: 17,
-                    color: "#fff",
+                    // color: "#fff",
                     fontFamily: "Amaranth-Bold",
                     backgroundColor: "#FFA067",
                     textAlign: "center",
                     borderRadius: 15,
                     textAlignVertical: "center",
-                    width: "95%",
-                    height: "80%",
+                    width: "97%",
+                    height: "82%",
                     color: "#000000"
 
                     //flex: 1
@@ -409,14 +420,14 @@ export default class SplashScreen extends Component {
                 <Text
                   style={{
                     fontSize: 17,
-                    color: "#fff",
+                    //color: "#fff",
                     fontFamily: "Amaranth-Bold",
                     backgroundColor: "#FFA067",
                     textAlign: "center",
                     borderRadius: 15,
                     textAlignVertical: "center",
-                    width: "95%",
-                    height: "80%",
+                    width: "97%",
+                    height: "82%",
                     color: "#000000"
                   }}
                 >
@@ -456,7 +467,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 20,
-    marginTop: 10,
+    //marginTop: 10,
     elevation: 1
   },
   SignUpBtn: {
@@ -466,7 +477,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 20,
-    marginTop: 10,
+    marginTop: 30,
     elevation: 1
   }
 });

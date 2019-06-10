@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View, TextInput } from "react-native";
-//import LoginPage from './app/sukiproject/components/LoginPage';
+import LoginPage from "./app/sukiproject/components/LoginPage";
 import {
   createStackNavigator,
   createAppContainer,
@@ -37,12 +37,20 @@ const AppNavigator = createStackNavigator({
     }
   },
 
-  // Login: {
-  //  screen: LoginPage,
-  //   navigationOptions: {
-  //    title:'Login'
-  //   },
-  //  },
+  Login: {
+    screen: LoginPage,
+    navigationOptions: {
+      header: null
+      // title: "Login",
+      // headerLeft: <View />,
+      //headerRight: <View />,
+
+      //headerTitleStyle: {
+      //  flex: 1,
+      //  textAlign: "center"
+      // }
+    }
+  },
   Sign: {
     screen: SignUp,
     navigationOptions: {
